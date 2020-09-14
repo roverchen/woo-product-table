@@ -1,5 +1,4 @@
-=== Woo Product Table - Free WooCommerce Table view solution ===
-Contributors: codersaiful,codeastrology
+=== Woo Product Table view solution ===
 Tags: wc product table,woocommerce product table, product table, wc table, quick order table, wholesale table, restaurants table
 Requires at least: 4.0.0
 Tested up to: 5.2.2
@@ -8,14 +7,13 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Product Table's pro Features in FREE. Easily display your products as table by tiny shortcode. Such: [Product_Table id='1']. Support default editor, any Page Builder & Gutenberg.
+Easily display your products as table by tiny shortcode. Such: [Product_Table id='1']. Support default editor, any Page Builder & Gutenberg.
 
 == Description ==
-Auto Responsive Mobile & Tab, Nice Design, Fast Speed *WooCommerce Product Table*. Tiny Shortcode, Easy customizable, Ajax Add to cart, Ajax Search, Pagination & Load More.
-*Woo Product Table - Free WooCommerce Table view solution* offers to show all products display as a table in page by light shortcode. Fully responsive and mobile friendly. Easily customizable - color,background,title,text color etc.
+Auto Responsive Mobile & Tab, Nice Design, Fast Speed *WooCommerce Product Table*. Tiny Shortcode, Easy customizable, Ajax Add to cart, Ajax Search, Pagination & Load More. Fully responsive and mobile friendly. Easily customizable - color,background,title,text color etc.
 .
 
-**WooCommerce Product Table** plugin offers to display your shop products in one page by shortcode as table. 
+**WooCommerce Product Table** plugin offers to display the shop products in one page by shortcode as table. 
 
 * Shop page as Table
 * Available add to cart in Table
@@ -77,7 +75,7 @@ Yes. You can set the product limit to show in yout able. Eg. You have 100 produc
 = How to use? =
 
 Install and activate. Then go to ( Dashboard -> Product Table-> Add New ).
- Give a suitable name of your table. Configure your table according to your need and click publish. Finally, copy the shortcode and paste it to your desired page or post.
+Give a suitable name of your table. Configure your table according to your need and click publish. Finally, copy the shortcode and paste it to your desired page or post.
 That's it. So easy, Right !!!
 
 = How to show specific Category products ? =
