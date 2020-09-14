@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WOO Product Table
  * Description: WooCommerce all products display as a table in one page by shortcode. Fully responsive and mobile friendly. Easily customizable - color,background,title,text color etc.
- * Author: DetaTech
- * Author URI: https://detatech.xyz
+ * Author: dgc.network
+ * Author URI: https://dgc.network
  * Tags: woocommerce product,woocommerce product table, product table
  * 
  * Version: 1.0
@@ -72,10 +72,10 @@ WOO_Product_Table::$columns_array =  array(
     'total'         => __( 'Total Price', 'wpt_pro' ),
     'Message'       => __( 'Short Message', 'wpt_pro' ),
     'quick'         => __( 'Quick View', 'wpt_pro' ),
-    'date'          =>  __( 'Date', 'wpt_pro' ),
-    'modified_date' =>  __( 'Modified Date', 'wpt_pro' ),
-    'attribute' =>  __( 'Attributes', 'wpt_pro' ),
-    'variations' =>  __( 'Variations', 'wpt_pro' ),
+    'date'          => __( 'Date', 'wpt_pro' ),
+    'modified_date' => __( 'Modified Date', 'wpt_pro' ),
+    'attribute'     => __( 'Attributes', 'wpt_pro' ),
+    'variations'    => __( 'Variations', 'wpt_pro' ),
     'action'        => __( 'Action', 'wpt_pro' ),
     'check'         => __( 'Check', 'wpt_pro' ),
     'quoterequest'  => __( 'Quote Request', 'wpt_pro' ),
@@ -131,10 +131,10 @@ WOO_Product_Table::$default = array(
     'plugin_name'           =>  WOO_Product_Table::getName(),
     'plugin_version'        =>  WOO_Product_Table::getVersion(),
     'footer_cart'           =>  'always_show', //hide_for_zerro
-    'footer_cart_size'           =>  '74',
-    'footer_bg_color'           =>  '#0a7f9c',
-    'footer_possition'           =>  'footer_possition',
-    'sku_search'           =>  '0',
+    'footer_cart_size'      =>  '74',
+    'footer_bg_color'       =>  '#0a7f9c',
+    'footer_possition'      =>  'footer_possition',
+    'sku_search'            =>  '0',
     'sort_mini_filter'      =>  'ASC',
     'sort_searchbox_filter' =>  'ASC',
     'custom_add_to_cart'    =>  'add_cart_left_icon',
@@ -316,8 +316,7 @@ class WOO_Product_Table{
        //Load File
        if( is_admin() ){
             require_once $this->path('BASE_DIR','admin/wpt_product_table_post.php');
-            require_once $this->path('BASE_DIR','admin/post_metabox.php');
-            
+            require_once $this->path('BASE_DIR','admin/post_metabox.php');            
             require_once $this->path('BASE_DIR','admin/menu_plugin_setting_link.php');
             require_once $this->path('BASE_DIR','admin/style_js_adding_admin.php');
             require_once $this->path('BASE_DIR','admin/fac_support_page.php');
