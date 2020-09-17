@@ -295,7 +295,7 @@ msgstr ""
 
 #: admin/configuration_page.php:41
 msgid ""
-"Remember: Each product table has indivisual configuration, wheich is First "
+"Remember: Each product table has indivisual configuration, which is First "
 "Importance. But to This Configuration has no \"First importance\"."
 msgstr ""
 

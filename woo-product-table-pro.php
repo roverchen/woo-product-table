@@ -319,9 +319,9 @@ class WOO_Product_Table{
             require_once $this->path('BASE_DIR','admin/post_metabox.php');            
             require_once $this->path('BASE_DIR','admin/menu_plugin_setting_link.php');
             require_once $this->path('BASE_DIR','admin/style_js_adding_admin.php');
-            require_once $this->path('BASE_DIR','admin/fac_support_page.php');
+            //require_once $this->path('BASE_DIR','admin/fac_support_page.php');
             require_once $this->path('BASE_DIR','admin/configuration_page.php');
-            require_once $this->path('BASE_DIR','admin/updater.php');
+            //require_once $this->path('BASE_DIR','admin/updater.php');
        }
        
        //Load these bellow file, Only woocommerce installed as well as Only for Front-End

@@ -18,8 +18,8 @@ function wpt_fac_support_page(){
                 <hr>
                 <div class="wpt_faq_support_link_collection">
                     <a href="https://detatech.xyz/portfolio" target="_blank"><?php esc_html_e( 'CodeAstrology Portfolios', 'wpt_pro' );?></a>
-                    <a href="https://github.com/DetaElectPro/woo-product-table" target="_blank"><?php esc_html_e( 'CodeAstrology Profile', 'wpt_pro' );?></a>
-                    <a href="https://github.com/DetaElectPro/woo-product-table/issues" target="_blank"><?php esc_html_e( 'CodeAstrology Support', 'wpt_pro' );?></a>
+                    <a href="https://github.com/dgc.network/woo-product-table" target="_blank"><?php esc_html_e( 'CodeAstrology Profile', 'wpt_pro' );?></a>
+                    <a href="https://github.com/dgc.network/woo-product-table/issues" target="_blank"><?php esc_html_e( 'CodeAstrology Support', 'wpt_pro' );?></a>
                     <a href="https://detatech.xyz" target="_blank"><?php esc_html_e( 'CodeAstrology.com', 'wpt_pro' );?></a>
 
                 </div>

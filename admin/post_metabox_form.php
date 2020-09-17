@@ -1,8 +1,8 @@
 <div id="wpt_configuration_form" class="wpt_shortcode_gen_panel">
     <h3 style="margin: 0">
-        <a target="_blank" href="https://github.com/DetaElectPro/woo-product-table/wiki">Documentation</a> | 
-        <a target="_blank" href="https://github.com/DetaElectPro/woo-product-table/issues">Get Support</a> | 
-        <a target="_blank" href="https://github.com/DetaElectPro/woo-product-table/issues">Forum</a> | 
+        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/wiki">Documentation</a> | 
+        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/issues">Get Support</a> | 
+        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/issues">Forum</a> | 
         <a target="_blank" href="https://detatech.xyz/blog/">CodeAstrology Blog</a>
         
     </h3>

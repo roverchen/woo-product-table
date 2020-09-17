@@ -1,7 +1,8 @@
 <?php
 
 /**
- * getting Config value. If get config value from post, then it will receive from post, Otherwise, will take data from Configuration value.
+ * getting Config value. If get config value from post, then it will receive from post, 
+ * Otherwise, will take data from Configuration value.
  * 
  * @param type $table_ID Mainly post ID of wpt_product_table. That means: its post id of product table
  * @return type Array
@@ -25,30 +26,29 @@ function wpt_get_config_value( $table_ID ){
 add_filter( 'woocommerce_add_to_cart_fragments', 'wpt_per_item_fragment', 999 , 1 );
 
 if( !function_exists( 'wpt_per_item_fragment' ) ) {
-	function wpt_per_item_fragment($fragments)
-	{
+	function wpt_per_item_fragment($fragments){
 		ob_start();
-                $Cart = WC()->cart->cart_contents;
-                $product_response = false;
-                if( is_array( $Cart ) && count( $Cart ) > 0 ){
-                    foreach($Cart as $perItem){
-                        //var_dump($perItem);
-                        $pr_id = (String) $perItem['product_id'];
-                        $pr_value = (String) $perItem['quantity'];
-                        $product_response[$pr_id] = (String)  (isset( $product_response[$pr_id] ) ? $product_response[$pr_id] + $pr_value : $pr_value);
-                        //$fragments["span.wpt_ccount.wpt_ccount_$pr_id"] = "<span class='wpt_ccount wpt_ccount_$pr_id'>$pr_value</span>";
-                    }
-                }
-                //$fragments["span.wpt_ccount"] = "";
-                if( is_array( $product_response ) && count( $product_response ) > 0 ){
-                    foreach( $product_response as $key=>$value ){
-                        //var_dump($perItem);
-                        $pr_id = (String) $key;
-                        $pr_value = (String) $value;
-                        $fragments["span.wpt_ccount.wpt_ccount_$pr_id"] = "<span class='wpt_ccount wpt_ccount_$pr_id'>$pr_value</span>";
-                    }
-                }
-                $fragments['.wpt-footer-cart-wrapper>a'] = '<a href="' . wc_get_cart_url() . '">' . WC()->cart->get_cart_subtotal() . '</a>';
+        $Cart = WC()->cart->cart_contents;
+        $product_response = false;
+        if( is_array( $Cart ) && count( $Cart ) > 0 ){
+            foreach($Cart as $perItem){
+                //var_dump($perItem);
+                $pr_id = (String) $perItem['product_id'];
+                $pr_value = (String) $perItem['quantity'];
+                $product_response[$pr_id] = (String)  (isset( $product_response[$pr_id] ) ? $product_response[$pr_id] + $pr_value : $pr_value);
+                //$fragments["span.wpt_ccount.wpt_ccount_$pr_id"] = "<span class='wpt_ccount wpt_ccount_$pr_id'>$pr_value</span>";
+            }
+        }
+        //$fragments["span.wpt_ccount"] = "";
+        if( is_array( $product_response ) && count( $product_response ) > 0 ){
+            foreach( $product_response as $key=>$value ){
+                //var_dump($perItem);
+                $pr_id = (String) $key;
+                $pr_value = (String) $value;
+                $fragments["span.wpt_ccount.wpt_ccount_$pr_id"] = "<span class='wpt_ccount wpt_ccount_$pr_id'>$pr_value</span>";
+            }
+        }
+        $fragments['.wpt-footer-cart-wrapper>a'] = '<a href="' . wc_get_cart_url() . '">' . WC()->cart->get_cart_subtotal() . '</a>';
 		echo wp_json_encode($product_response);
 		
 		$fragments["wpt_per_product"] = ob_get_clean();

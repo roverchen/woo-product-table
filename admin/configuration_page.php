@@ -38,7 +38,7 @@ function wpt_configuration_page(){
             <div style="padding-top: 15px;padding-bottom: 15px;" class="fieldwrap wpt_result_footer">
                 <br style="clear: both;">
             <h1 style="padding-left: 15px;"><?php esc_html_e( 'Common Configuration', 'wpt_pro' );?></h1>
-            <p><?php esc_html_e( 'Remember: Each product table has indivisual configuration, wheich is First Importance. But to This Configuration has no "First importance".', 'wpt_pro' );?></p>
+            <p><?php esc_html_e( 'Remember: Each product table has indivisual configuration, which is First Importance. But to This Configuration has no "First importance".', 'wpt_pro' );?></p>
             <br>
                 <form action="" method="POST">
                     <input name="data[plugin_version]" type="hidden" value="<?php echo WOO_Product_Table::getVersion(); ?>" style="">
