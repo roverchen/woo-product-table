@@ -418,20 +418,20 @@ function wpt_custom_search_join( $join ) {
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
  */
 function wpt_custom_search_where( $where ) {
-        global $pagenow, $wpdb;
-        $myPreg = "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1";
-        /*****************
-        $myPreg .= " AND (";
-        $myPreg .= $wpdb->postmeta.".meta_key='test'";
+    global $pagenow, $wpdb;
+    $myPreg = "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1";
+    /*****************
+    $myPreg .= " AND (";
+    $myPreg .= $wpdb->postmeta.".meta_key='test'";
 
 
-        $myPreg .= " OR ";
-        $myPreg .= $wpdb->postmeta.".meta_key='_sku'";
+    $myPreg .= " OR ";
+    $myPreg .= $wpdb->postmeta.".meta_key='_sku'";
 
-        $myPreg .= ")";
-        //***********************/
-        $myPreg .= ")";
-        $where = preg_replace("/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",$myPreg, $where );
+    $myPreg .= ")";
+    //***********************/
+    $myPreg .= ")";
+    $where = preg_replace("/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",$myPreg, $where );
 
     return $where;
 }
@@ -442,10 +442,9 @@ function wpt_custom_search_where( $where ) {
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
  */
 function wpt_custom_search_distinct( $where ) {
-        global $wpdb;
-        return "DISTINCT";
-        return $where;
-    
+    global $wpdb;
+    return "DISTINCT";
+    return $where;    
 }
 
 $config_value = get_option( 'wpt_configure_options' );
@@ -453,4 +452,4 @@ if( isset( $config_value['sku_search'] ) && $config_value['sku_search'] == '1' )
     add_filter('posts_join', 'wpt_custom_search_join' );
     add_filter( 'posts_where', 'wpt_custom_search_where' );
     add_filter( 'posts_distinct', 'wpt_custom_search_distinct' );
- endif;
+endif;
