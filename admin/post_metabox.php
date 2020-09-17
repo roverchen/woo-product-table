@@ -14,8 +14,7 @@
  */
 function wpt_shortcode_metabox(){
     add_meta_box( 'wpt_shortcode_metabox_id', 'Shortcode', 'wpt_shortcode_metabox_render', 'wpt_product_table', 'normal' );
-    add_meta_box( 'wpt_shortcode_configuration_metabox_id', 'Table Configuration', 'wpt_shortcode_configuration_metabox_render', 'wpt_product_table', 'normal' ); //Added at 4.1.4
-    
+    add_meta_box( 'wpt_shortcode_configuration_metabox_id', 'Table Configuration', 'wpt_shortcode_configuration_metabox_render', 'wpt_product_table', 'normal' ); //Added at 4.1.4    
 }
 
 function wpt_shortcode_metabox_render(){
@@ -24,8 +23,7 @@ function wpt_shortcode_metabox_render(){
     $post_title = preg_replace( '/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/',"$1", $post->post_title );
     echo '<input type="text" value="[Product_Table id=\'' . $curent_post_id . '\' name=\'' . $post_title . '\']" class="wpt_auto_select_n_copy wpt_meta_box_shortcode mb-text-input mb-field" id="wpt_metabox_copy_content" readonly>'; // class='wpt_auto_select_n_copy'
     echo '<a style="display:none;"  class="button button-primary wpt_copy_button_metabox" data-target_id="wpt_metabox_copy_content">Copy</a>';
-    echo '<p style="color: green;font-weight:bold;display:none; padding-left: 12px;" class="wpt_metabox_copy_content"></p>';
-  
+    echo '<p style="color: green;font-weight:bold;display:none; padding-left: 12px;" class="wpt_metabox_copy_content"></p>';  
 }
 
 
@@ -47,13 +45,13 @@ function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // s
      */
 
     if ( ! isset( $_POST['wpt_shortcode_nonce_value'] ) ) { // Check if our nonce is set.
-            return;
+        return;
     }
 
     // verify this came from the our screen and with proper authorization,
     // because save_post can be triggered at other times
     if( !wp_verify_nonce( $_POST['wpt_shortcode_nonce_value'], plugin_basename(__FILE__) ) ) {
-            return;
+        return;
     }
     //Column Tab Update part
     update_post_meta( $post_id, 'column_array', $_POST['column_array'] );
@@ -72,15 +70,11 @@ function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // s
     
     //Conditions part conditions
     update_post_meta( $post_id, 'search_n_filter', $_POST['search_n_filter'] );
-    
-    
+        
     //Pagination
     update_post_meta( $post_id, 'pagination', $_POST['pagination'] );
     
     //Pagination
-    update_post_meta( $post_id, 'config', $_POST['config'] );
-    
-    
-    
+    update_post_meta( $post_id, 'config', $_POST['config'] );            
 }
 add_action( 'save_post', 'wpt_shortcode_configuration_metabox_save_meta', 1, 2 ); // 

@@ -6,6 +6,7 @@ add_action( 'load-edit.php', 'wpt_plugin_updater_loader' );
 add_action( 'load-index.php', 'wpt_plugin_updater_loader' );
 add_action( 'load-plugin-install.php', 'wpt_plugin_updater_loader' );
 add_action( 'load-plugin-editor.php', 'wpt_plugin_updater_loader' );
+
 function wpt_plugin_updater_loader() {
     $option_name = WOO_Product_Table::$options_name;
     $purchase_code = 'dddd';//get_option( $option_name );//'268c405a-39e3-4f06-b74c-1c2b16f9540c';
@@ -17,11 +18,10 @@ function wpt_plugin_updater_loader() {
     $updtr->start();
 }
 
-
 function wpt_updater_admin_menu() {
     add_submenu_page( 'edit.php?post_type=wpt_product_table', esc_html__( 'Activate Purchase Code', 'wpt_pro' ),  esc_html__( 'Activate', 'wpt_pro' ), 'edit_theme_options', 'wpt-activate-purchase-code', 'wpt_activate_purchase_code_page' );  
 }
-add_action( 'admin_menu', 'wpt_updater_admin_menu' );
+//add_action( 'admin_menu', 'wpt_updater_admin_menu' );
 
 function wpt_activate_purchase_code_page(){
     $option_name = WOO_Product_Table::$options_name;//'wpt_codecanyon_purchase_code';

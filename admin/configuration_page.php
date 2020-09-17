@@ -569,7 +569,7 @@ function wpt_configuration_page(){
             
         </div>
         <!-- Right Side start here -->
-        <?php include __DIR__ . '/includes/right_side.php'; ?> 
+        <?php //include __DIR__ . '/includes/right_side.php'; ?> 
     </div>  
     
     <style>
