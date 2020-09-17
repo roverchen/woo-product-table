@@ -109,35 +109,36 @@ function wpt_additions_data_attribute( $attributes = false ){
     $html = false;
     if( $attributes && is_array( $attributes ) && count( $attributes ) > 0 ){
         foreach ( $attributes as $attribute ) :
-        $html .= "<div class='wpt_each_attribute_wrapper'>";
+            $html .= "<div class='wpt_each_attribute_wrapper'>";
             $html .= "<label>" . wc_attribute_label( $attribute->get_name() ) . "</label>";
             
             $values = array();
 
             if ( $attribute->is_taxonomy() ) {
-                    $attribute_taxonomy = $attribute->get_taxonomy_object();
-                    $attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
+                $attribute_taxonomy = $attribute->get_taxonomy_object();
+                $attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
 
-                    foreach ( $attribute_values as $attribute_value ) {
-                            $value_name = esc_html( $attribute_value->name );
+                foreach ( $attribute_values as $attribute_value ) {
+                    $value_name = esc_html( $attribute_value->name );
 
-                            if ( $attribute_taxonomy->attribute_public ) {
-                                    $values[] = '<a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a>';
-                            } else {
-                                    $values[] = $value_name;
-                            }
+                    if ( $attribute_taxonomy->attribute_public ) {
+                        $values[] = '<a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a>';
+                    } else {
+                        $values[] = $value_name;
                     }
+                }
+
             } else {
-                    $values = $attribute->get_options();
+                $values = $attribute->get_options();
 
-                    foreach ( $values as &$value ) {
-                            $value = make_clickable( esc_html( $value ) );
-                    }
+                foreach ( $values as &$value ) {
+                    $value = make_clickable( esc_html( $value ) );
+                }
             }
 
-	$html .= apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+	        $html .= apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
             
-        $html .= '</div>';
+            $html .= '</div>';
         endforeach;
     }
     return $html;
@@ -313,7 +314,7 @@ function wpt_array_to_option_atrribute( $current_single_attribute = false ){
     $html = '<option value>'.esc_html__( 'None', 'wpt_pro' ).'</option>';
     if( is_array( $current_single_attribute ) && count( $current_single_attribute ) ){
         foreach( $current_single_attribute as $wpt_pr_attributes ){
-        $html .= "<option value='{$wpt_pr_attributes}'>" . ucwords( $wpt_pr_attributes ) . "</option>";
+            $html .= "<option value='{$wpt_pr_attributes}'>" . ucwords( $wpt_pr_attributes ) . "</option>";
         }
     }
     return $html;
