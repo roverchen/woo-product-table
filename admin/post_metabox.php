@@ -18,6 +18,7 @@ function wpt_shortcode_metabox(){
 }
 
 function wpt_shortcode_metabox_render(){
+    // How to find the under value????
     global $post;
     $curent_post_id = $post->ID;
     $post_title = preg_replace( '/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/',"$1", $post->post_title );
@@ -25,7 +26,6 @@ function wpt_shortcode_metabox_render(){
     echo '<a style="display:none;"  class="button button-primary wpt_copy_button_metabox" data-target_id="wpt_metabox_copy_content">Copy</a>';
     echo '<p style="color: green;font-weight:bold;display:none; padding-left: 12px;" class="wpt_metabox_copy_content"></p>';  
 }
-
 
 //Now start metabox for shortcode Generator
 function wpt_shortcode_configuration_metabox_render(){
@@ -36,7 +36,6 @@ function wpt_shortcode_configuration_metabox_render(){
     <br style="clear: both;">
     <?php
 }
-
 
 function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // save the data
     /*
@@ -60,21 +59,23 @@ function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // s
     
     //Basic Part Update
     update_post_meta( $post_id, 'basics', $_POST['basics'] );
+
     //Table Style/Design part
     update_post_meta( $post_id, 'table_style', $_POST['table_style'] );
+    
     //Conditions part conditions
     update_post_meta( $post_id, 'conditions', $_POST['conditions'] );
     
-    //Conditions part conditions
+    //Mobile issue
     update_post_meta( $post_id, 'mobile', $_POST['mobile'] );
     
-    //Conditions part conditions
+    //Search Box & Filter
     update_post_meta( $post_id, 'search_n_filter', $_POST['search_n_filter'] );
         
     //Pagination
     update_post_meta( $post_id, 'pagination', $_POST['pagination'] );
     
-    //Pagination
+    //Configuration
     update_post_meta( $post_id, 'config', $_POST['config'] );            
 }
 add_action( 'save_post', 'wpt_shortcode_configuration_metabox_save_meta', 1, 2 ); // 

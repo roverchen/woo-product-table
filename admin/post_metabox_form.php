@@ -1,10 +1,7 @@
 <div id="wpt_configuration_form" class="wpt_shortcode_gen_panel">
     <h3 style="margin: 0">
         <a target="_blank" href="https://github.com/dgc.network/woo-product-table/wiki">Documentation</a> | 
-        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/issues">Get Support</a> | 
-        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/issues">Forum</a> | 
-        <a target="_blank" href="https://detatech.xyz/blog/">CodeAstrology Blog</a>
-        
+        <a target="_blank" href="https://github.com/dgc.network/woo-product-table/issues">Get Support</a>
     </h3>
     <!-- New Version's Warning. We will remove it from 5.00 | End -->
     <?php
@@ -13,11 +10,11 @@
      * this $tab_arry will define, how much tab and tab content
      */
     $tab_array = array(
-        'column_settings'   => __( "Column", 'wpt_pro' ),
+        'column_settings'   => __( 'Column', 'wpt_pro' ),
         'basics'            => __( 'Basics', 'wpt_pro' ),
-        'table_style'       => __( 'Design', 'wpt_pro' ),
+        'table_style'       => __( 'Style Design', 'wpt_pro' ),
         'conditions'        => __( 'Conditions', 'wpt_pro' ),
-        'search_n_filter'   => __( 'Search Box And Filter','wpt_pro' ),
+        'search_n_filter'   => __( 'Search Box & Filter','wpt_pro' ),
         'pagination'        => __( 'Pagination', 'wpt_pro' ),
         'mobile'            => __( 'Mobile Issue', 'wpt_pro' ),
         'config'            => __( 'Configuration', 'wpt_pro' ),

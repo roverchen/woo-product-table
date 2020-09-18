@@ -920,7 +920,7 @@ msgid "Basics"
 msgstr ""
 
 #: admin/post_metabox_form.php:18
-msgid "Design"
+msgid "Style Design"
 msgstr ""
 
 #: admin/post_metabox_form.php:19
@@ -928,7 +928,7 @@ msgid "Conditions"
 msgstr ""
 
 #: admin/post_metabox_form.php:20
-msgid "Search Box And Filter"
+msgid "Search Box & Filter"
 msgstr ""
 
 #: admin/post_metabox_form.php:21 admin/tabs/table_style.php:352
@@ -1272,7 +1272,7 @@ msgid "eg: Product Color"
 msgstr ""
 
 #: admin/tabs/column_settings.php:69
-msgid "Add as Column)"
+msgid "Add as Column"
 msgstr ""
 
 #: admin/tabs/column_settings.php:74

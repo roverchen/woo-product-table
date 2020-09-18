@@ -10,7 +10,7 @@
  */
 if ( ! function_exists('wpt_product_table_post') ) {
 	function wpt_product_table_post() {
-	    $icon = WOO_Product_Table::getPath( 'BASE_URL' ) . 'images/table_icon.png';
+	    $icon = WOO_Product_Table::getPath( 'BASE_URL' ) . 'images/table_icon2.png';
 		$labels = array(
 			'name'                  => _x( 'Product Table', 'Product Table', 'wpt_pro' ),
 			'singular_name'         => _x( 'PRODUCT TABLE', 'PRODUCT TABLE', 'wpt_pro' ),
